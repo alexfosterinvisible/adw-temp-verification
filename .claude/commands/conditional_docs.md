@@ -36,6 +36,13 @@ This prompt helps you determine what documentation you should read based on the 
     - When troubleshooting feature-specific functionality
     - When implementing changes related to documented features
 
+- app_docs/feature-7b529110-power-sqrt-operations.md
+  - Conditions:
+    - When working with Calculator class power or sqrt methods
+    - When implementing mathematical operations (exponential, root calculations)
+    - When troubleshooting power or square root calculations
+    - When adding new mathematical methods to Calculator class
+
 ## Customization
 
 Replace bracketed `[items]` with your project-specific paths:

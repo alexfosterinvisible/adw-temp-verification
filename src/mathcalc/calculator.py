@@ -23,3 +23,13 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
+
+    def power(self, base: float, exponent: float) -> float:
+        """Return base raised to exponent power."""
+        return base ** exponent
+
+    def sqrt(self, n: float) -> float:
+        """Return the square root of n. Raises ValueError if n is negative."""
+        if n < 0:
+            raise ValueError("Cannot calculate square root of negative number")
+        return math.sqrt(n)
