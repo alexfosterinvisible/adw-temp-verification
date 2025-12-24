@@ -32,3 +32,24 @@ def test_divide_by_zero():
     calc = Calculator()
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         calc.divide(5, 0)
+
+
+def test_power():
+    calc = Calculator()
+    assert calc.power(2, 3) == 8
+    assert calc.power(5, 0) == 1
+    assert calc.power(2, -2) == 0.25
+    assert calc.power(4, 0.5) == 2.0
+
+
+def test_sqrt():
+    calc = Calculator()
+    assert calc.sqrt(16) == 4.0
+    assert calc.sqrt(2) == pytest.approx(1.414, rel=0.001)
+    assert calc.sqrt(0) == 0
+
+
+def test_sqrt_negative():
+    calc = Calculator()
+    with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
+        calc.sqrt(-1)
