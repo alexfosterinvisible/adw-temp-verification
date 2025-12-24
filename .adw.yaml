@@ -1,0 +1,23 @@
+# .adw.yaml - ADW Framework Configuration
+
+# REQUIRED: Used for artifact namespacing (matches GitHub repo)
+project_id: "alexfosterinvisible/adw-temp-verification"
+
+# REQUIRED: Where ADW stores state, logs, worktrees
+artifacts_dir: "./artifacts"
+
+# Port ranges for isolated worktrees (15 concurrent agents max)
+ports:
+  backend_start: 9100
+  backend_count: 15
+  frontend_start: 9200
+  frontend_count: 15
+
+# Claude command paths (framework commands + your overrides)
+commands:
+  - "${ADW_FRAMEWORK}/commands"
+  - ".claude/commands"
+
+# App-specific settings (customize for your project)
+app:
+  test_command: "uv run pytest"

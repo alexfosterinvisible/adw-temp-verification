@@ -3,10 +3,15 @@ name = "mathcalc"
 version = "0.1.0"
 description = "Simple calculator library"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "adw-framework",
+]
 
 [project.optional-dependencies]
 dev = ["pytest"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+
+[tool.uv.sources]
+adw-framework = { path = "../adw-framework" }
